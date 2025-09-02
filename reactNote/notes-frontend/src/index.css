@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.note-form button {
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.note-list {
+  margin-top: 20px;
+}
+
+.note-card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-card button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
