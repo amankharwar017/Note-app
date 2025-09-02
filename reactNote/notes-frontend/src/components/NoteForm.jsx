@@ -8,7 +8,7 @@ export default function NoteForm({ onNoteAdded }) {
     e.preventDefault();
     const note = { title, content };
 
-    const res = await fetch("http://localhost:8080/api/notes", {
+    const res = await fetch("http://localhost:8081/api/notes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(note),
@@ -16,7 +16,6 @@ export default function NoteForm({ onNoteAdded }) {
 
     const data = await res.json();
     onNoteAdded(data);
-
     setTitle("");
     setContent("");
   };

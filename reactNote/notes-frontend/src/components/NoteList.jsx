@@ -1,6 +1,6 @@
 export default function NoteList({ notes, onNoteDeleted }) {
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:8080/api/notes/${id}`, { method: "DELETE" });
+    await fetch(`http://localhost:8081/api/notes/${id}`, { method: "DELETE" });
     onNoteDeleted(id);
   };
 

@@ -15,7 +15,7 @@ public class NoteController {
     @Autowired
     private NoteRepository repo;
 
-    @GetMapping
+    @GetMapping("/getAll")
     public List<Note> getAllNotes() {
         return repo.findAll();
     }
