@@ -1,18 +1,14 @@
-export default function NoteList({ notes, onNoteDeleted }) {
-  const handleDelete = async (id) => {
-    await fetch(`http://localhost:8081/api/notes/${id}`, { method: "DELETE" });
-    onNoteDeleted(id);
-  };
+import React from "react";
+import NoteItem from "./NoteItem";
 
+function NoteList(props) {
   return (
     <div className="note-list">
-      {notes.map((note) => (
-        <div key={note.id} className="note-card">
-          <h3>{note.title}</h3>
-          <p>{note.content}</p>
-          <button onClick={() => handleDelete(note.id)}>Delete</button>
-        </div>
-      ))}
+      {props.notes.map(function (note) {
+        return <NoteItem key={note.id} note={note} onDelete={props.onDelete} />;
+      })}
     </div>
   );
 }
+
+export default NoteList;
